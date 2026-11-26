@@ -1,0 +1,1207 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thami & Tata ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --rosa: #f3d5e2;
+  --rosa-escuro: #bd7898;
+  --lilas: #e7def5;
+  --azul: #dcecf7;
+  --menta: #deeee4;
+  --creme: #fffaf7;
+  --texto: #665667;
+  --branco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background: var(--creme);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.container {
+  width: 88%;
+  max-width: 1120px;
+  margin: auto;
+}
+
+/* MENU */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fffaf7eF;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #f0e5eb;
+}
+
+.header {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font: 600 25px 'Playfair Display', serif;
+  color: #72586d;
+}
+
+.logo span {
+  color: var(--rosa-escuro);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  font-size: 13px;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--rosa-escuro);
+}
+
+.nav-button {
+  background: var(--rosa);
+  padding: 10px 18px;
+  border-radius: 30px;
+}
+
+.menu {
+  display: none;
+  border: none;
+  background: var(--rosa);
+  color: var(--rosa-escuro);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* INÍCIO */
+
+.hero {
+  padding: 100px 0 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f3d5e2, transparent 70%);
+  top: -180px;
+  left: -200px;
+  opacity: .7;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e7def5, transparent 70%);
+  right: -250px;
+  bottom: -200px;
+  opacity: .7;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rosa-escuro);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(55px, 7vw, 95px);
+  line-height: 1.1;
+  margin: 25px 0;
+  letter-spacing: -3px;
+}
+
+h1 em, h2 em {
+  color: var(--rosa-escuro);
+}
+
+.hero p {
+  max-width: 450px;
+  color: #8b7e8c;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 23px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}
+
+.primary {
+  background: var(--rosa-escuro);
+  color: white;
+  box-shadow: 0 10px 25px #bd789833;
+}
+
+.secondary {
+  background: white;
+  border: 1px solid #f0e5eb;
+}
+
+.signature {
+  font: italic 22px 'Playfair Display', serif;
+  color: var(--rosa-escuro);
+  margin-top: 28px;
+}
+
+/* FOTO */
+
+.photo-area {
+  min-height: 450px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.photo-frame {
+  width: 310px;
+  padding: 13px 13px 45px;
+  background: white;
+  border-radius: 12px 12px 90px 12px;
+  box-shadow: 0 20px 50px #77536b18;
+  transform: rotate(5deg);
+}
+
+.photo {
+  height: 350px;
+  border-radius: 8px 8px 70px 8px;
+  background: linear-gradient(145deg, #f6dce7, #e6dcf5, #dcefe5);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid #ffffffaa;
+  border-radius: 50%;
+}
+
+.photo span {
+  font-size: 75px;
+  position: relative;
+}
+
+.photo-caption {
+  text-align: center;
+  font: 23px 'Playfair Display', serif;
+  color: #a66f8d;
+  padding-top: 12px;
+}
+
+.floating-label {
+  position: absolute;
+  padding: 13px 18px;
+  background: #ffffffdd;
+  backdrop-filter: blur(10px);
+  border-radius: 20px 20px 20px 5px;
+  box-shadow: 0 12px 30px #77536b15;
+  font-size: 12px;
+}
+
+.label1 {
+  top: 45px;
+  left: -10px;
+  transform: rotate(-7deg);
+}
+
+.label2 {
+  bottom: 45px;
+  right: -10px;
+  transform: rotate(5deg);
+}
+
+/* SEÇÕES */
+
+section {
+  position: relative;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: clamp(38px, 5vw, 60px);
+  margin: 18px 0;
+}
+
+.section-title p {
+  color: #8b7e8c;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* SOBRE */
+
+#sobre {
+  padding-top: 70px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.story {
+  background: white;
+  padding: 45px;
+  border-radius: 10px 35px 35px 35px;
+  border: 1px solid #f0e5eb;
+  box-shadow: 0 15px 40px #77536b0c;
+  transform: rotate(-1deg);
+}
+
+.story h3 {
+  font-size: 32px;
+  color: #a67591;
+  margin-bottom: 20px;
+}
+
+.story p {
+  color: #8b7e8c;
+  font-size: 14px;
+  line-height: 2.1;
+  margin-bottom: 15px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mini-card {
+  padding: 25px;
+  border-radius: 25px 12px 25px 25px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  transition: .3s;
+  box-shadow: 0 10px 25px #77536b08;
+}
+
+.mini-card:hover {
+  transform: translateX(8px);
+}
+
+.mini-card:nth-child(2) {
+  margin-left: 22px;
+}
+
+.mini-card:nth-child(3) {
+  margin-right: 18px;
+}
+
+.mini-card span {
+  font-size: 28px;
+}
+
+.mini-card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.mini-card p {
+  font-size: 12px;
+}
+
+.pink { background: #f8e5ed; }
+.lilac { background: #eee7f8; }
+.mint { background: #e4f1e9; }
+.blue { background: #e3eff8; }
+.peach { background: #faeade; }
+
+/* GOSTOS */
+
+.gostos-bg {
+  background: linear-gradient(135deg, #fff4f7, #f8f3fc, #f2f8f5);
+  border-radius: 80px 22px 80px 22px;
+  padding: 85px 7%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 65px #9673960c;
+}
+
+.gostos-bg::before {
+  content: "✿";
+  position: absolute;
+  font-size: 100px;
+  color: #bd78981c;
+  bottom: 5px;
+  left: 25px;
+  transform: rotate(-18deg);
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.interest-card {
+  background: #ffffffd9;
+  border: 1px solid white;
+  border-radius: 28px 10px 28px 28px;
+  padding: 27px 22px;
+  min-height: 270px;
+  transition: .3s;
+}
+
+.interest-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px #77536b15;
+}
+
+.interest-card:nth-child(2) {
+  transform: translateY(22px);
+}
+
+.interest-card:nth-child(3) {
+  transform: translateY(-8px);
+}
+
+.interest-card:nth-child(4) {
+  transform: translateY(14px);
+}
+
+.interest-card:nth-child(2):hover,
+.interest-card:nth-child(3):hover,
+.interest-card:nth-child(4):hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 18px 18px 18px 5px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  margin-bottom: 24px;
+}
+
+.interest-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.interest-card p {
+  color: #8b7e8c;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.interest-card small {
+  display: block;
+  margin-top: 17px;
+  color: #b27b98;
+}
+
+/* HABILIDADES */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.skills-intro {
+  padding-left: 20px;
+  position: relative;
+}
+
+.skills-intro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 3px;
+  border-radius: 10px;
+  background: linear-gradient(var(--rosa), var(--lilas), var(--menta));
+}
+
+.skills-intro h2 {
+  font-size: 55px;
+  margin: 20px 0;
+}
+
+.skills-intro p {
+  color: #8b7e8c;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.skills-box {
+  background: white;
+  padding: 42px;
+  border-radius: 12px 35px 12px 35px;
+  box-shadow: 0 18px 45px #77536b10;
+  border: 1px solid #f0e5eb;
+  transform: rotate(1deg);
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skill-top span:last-child {
+  color: #a17c97;
+}
+
+.bar {
+  height: 10px;
+  border-radius: 30px;
+  background: #f5edf2;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #e8b9ce, #c7b5e6);
+}
+
+/* SONHOS */
+
+.sonhos-bg {
+  background: linear-gradient(135deg, #f9eaf0, #f0eafa);
+  border-radius: 22px 85px 22px 85px;
+  padding: 90px 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sonhos-bg::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid #ffffffaa;
+  border-radius: 50%;
+  left: -180px;
+  bottom: -150px;
+}
+
+.sonhos-bg > * {
+  position: relative;
+}
+
+.sonhos-intro {
+  text-align: center;
+  max-width: 550px;
+  margin: -20px auto 35px;
+  color: #8b7e8c;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.dream-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.dream-card {
+  background: #ffffffd9;
+  border: 1px solid white;
+  border-radius: 34px 12px 34px 12px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 12px 30px #77536b0d;
+  transition: .3s;
+}
+
+.dream-card:nth-child(2) {
+  transform: translateY(25px);
+}
+
+.dream-card:hover {
+  transform: translateY(-7px);
+}
+
+.dream-card span {
+  font-size: 40px;
+}
+
+.dream-card h3 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.dream-card p {
+  color: #8b7e8c;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.dream-card small {
+  display: block;
+  margin-top: 18px;
+  color: #b27b98;
+}
+
+.quote {
+  max-width: 650px;
+  margin: 55px auto 0;
+  text-align: center;
+  font: italic 23px/1.7 'Playfair Display', serif;
+  color: #986d89;
+  padding: 25px;
+  border-top: 1px solid #ffffffaa;
+  border-bottom: 1px solid #ffffffaa;
+}
+
+/* CONTATO */
+
+.contato {
+  text-align: center;
+  padding: 110px 0;
+  background: radial-gradient(ellipse at center, #f8e1eb, #fffaf7 70%);
+  overflow: hidden;
+}
+
+.contato h2 {
+  font-size: clamp(40px, 5vw, 65px);
+  max-width: 700px;
+  margin: 22px auto;
+}
+
+.contato p {
+  max-width: 490px;
+  margin: 20px auto 30px;
+  color: #8b7e8c;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.insta {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #a57893;
+}
+
+/* RODAPÉ */
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  background: var(--creme);
+  border-top: 1px solid #f0e5eb;
+}
+
+footer h3 {
+  font-size: 27px;
+  color: #a67591;
+  margin-bottom: 8px;
+}
+
+footer p {
+  color: #a295a1;
+  font-size: 11px;
+  line-height: 2;
+}
+
+/* ANIMAÇÃO */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: .8s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CELULAR */
+
+@media(max-width: 900px) {
+  .hero-grid {
+    gap: 30px;
+  }
+
+  .about-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .interest-card:nth-child(n) {
+    transform: none;
+  }
+
+  .dream-card:nth-child(2) {
+    transform: none;
+  }
+}
+
+@media(max-width: 680px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    height: 68px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fffaf7;
+    padding: 25px;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 20px #0000000d;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    padding: 65px 0 80px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .photo-area {
+    min-height: 370px;
+  }
+
+  .photo-frame {
+    width: 265px;
+  }
+
+  .photo {
+    height: 290px;
+  }
+
+  .label1 {
+    left: 0;
+  }
+
+  .label2 {
+    right: 0;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .story {
+    padding: 30px 25px;
+    transform: none;
+  }
+
+  .mini-card:nth-child(n) {
+    margin: 0;
+  }
+
+  .gostos-bg,
+  .sonhos-bg {
+    padding: 55px 18px;
+    border-radius: 40px 12px;
+  }
+
+  .interest-grid {
+    gap: 12px;
+  }
+
+  .interest-card {
+    padding: 20px 16px;
+    min-height: 230px;
+  }
+
+  .interest-card h3 {
+    font-size: 21px;
+  }
+
+  .interest-card p {
+    font-size: 12px;
+  }
+
+  .skills-box {
+    padding: 27px 22px;
+    transform: none;
+  }
+
+  .skills-intro h2 {
+    font-size: 45px;
+  }
+
+  .dream-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dream-card {
+    padding: 28px;
+  }
+
+  .quote {
+    font-size: 19px;
+    padding: 20px 5px;
+  }
+
+  .contato {
+    padding: 75px 0;
+  }
+}
+
+@media(max-width: 390px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-card {
+    min-height: auto;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header">
+    <a href="#inicio" class="logo">Thami <span>♡</span> Tata</a>
+
+    <button class="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#gostos">Meus gostos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#sonhos">Sonhos</a>
+      <a href="#contato" class="nav-button">Contato ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+
+    <div class="reveal">
+      <span class="tag">Um cantinho especial</span>
+
+      <h1>Meu mundo,<br><em>do meu jeitinho.</em></h1>
+
+      <p>
+        Uma garota que ama música, boas amizades,
+        palavras bonitas e pequenos momentos
+        que tornam a vida especial.
+      </p>
+
+      <div class="buttons">
+        <a href="#sobre" class="button primary">Conheça minha história ↗</a>
+        <a href="#gostos" class="button secondary">O que eu amo</a>
+      </div>
+
+      <div class="signature">Com carinho, Thami ♡</div>
+    </div>
+
+    <div class="photo-area reveal">
+      <div class="floating-label label1">um pouquinho de mim ✿</div>
+
+      <div class="photo-frame">
+        <div class="photo">
+          <span>🌷</span>
+        </div>
+        <div class="photo-caption">my little world</div>
+      </div>
+
+      <div class="floating-label label2">florescendo no meu tempo</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <div class="container">
+
+    <div class="section-title reveal">
+      <span class="tag">Prazer, sou eu</span>
+      <h2>Um pouquinho de <em>mim</em></h2>
+      <p>Minha história, minhas pequenas coisas e tudo aquilo que faz parte de quem eu sou.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <article class="story reveal">
+        <h3>Minha essência</h3>
+
+        <p>
+          Sou uma garota que gosta de ser amiga de todos,
+          conhecer pessoas e compartilhar momentos especiais.
+          Gosto de redação e de aprender coisas novas.
+        </p>
+
+        <p>
+          Moro em Rosário do Ivaí, mas nasci em Curitiba.
+          Tenho 15 anos e estou descobrindo quem quero ser,
+          construindo meus sonhos e aproveitando cada fase da vida.
+        </p>
+
+        <div class="signature">Com amor, Thami ♡</div>
+      </article>
+
+      <div class="cards">
+
+        <article class="mini-card pink reveal">
+          <span>🌸</span>
+          <div>
+            <h3>Minha personalidade</h3>
+            <p>Amizade, carinho e alegria.</p>
+          </div>
+        </article>
+
+        <article class="mini-card lilac reveal">
+          <span>🦋</span>
+          <div>
+            <h3>Minha essência</h3>
+            <p>Ser eu mesma e florescer.</p>
+          </div>
+        </article>
+
+        <article class="mini-card mint reveal">
+          <span>✧</span>
+          <div>
+            <h3>Minha jornada</h3>
+            <p>Aprender, crescer e sonhar.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gostos">
+  <div class="container gostos-bg">
+
+    <div class="section-title reveal">
+      <span class="tag">Coisinhas que amo</span>
+      <h2>Meus pequenos <em>amores</em></h2>
+      <p>Detalhes simples que deixam meus dias mais coloridos.</p>
+    </div>
+
+    <div class="interest-grid">
+
+      <article class="interest-card reveal">
+        <div class="icon pink">🎧</div>
+        <h3>Música</h3>
+        <p>Amo escutar música e deixar cada canção fazer parte dos meus momentos.</p>
+        <small>music is my therapy ♡</small>
+      </article>
+
+      <article class="interest-card reveal">
+        <div class="icon lilac">✍️</div>
+        <h3>Redação</h3>
+        <p>Gosto de escrever, expressar minhas ideias e transformar pensamentos em palavras.</p>
+        <small>words have magic ✧</small>
+      </article>
+
+      <article class="interest-card reveal">
+        <div class="icon peach">♡</div>
+        <h3>Amizades</h3>
+        <p>Amo fazer amizades, conhecer pessoas e compartilhar momentos felizes.</p>
+        <small>spread love ♡</small>
+      </article>
+
+      <article class="interest-card reveal">
+        <div class="icon blue">⌘</div>
+        <h3>Tecnologia</h3>
+        <p>Estou aprendendo HTML, CSS e descobrindo o universo da programação.</p>
+        <small>dream & create ✨</small>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="habilidades">
+  <div class="container skills-grid">
+
+    <div class="skills-intro reveal">
+      <span class="tag">Um pouco do que aprendo</span>
+      <h2>Meu lado <em>criativo</em></h2>
+      <p>
+        Cada habilidade é uma coisa nova que estou descobrindo
+        e desenvolvendo com o tempo. Ainda tenho muito para
+        aprender — e isso faz parte da magia.
+      </p>
+    </div>
+
+    <div class="skills-box reveal">
+
+      <div class="skill">
+        <div class="skill-top"><span>HTML</span><span>65%</span></div>
+        <div class="bar"><span style="width:65%"></span></div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top"><span>CSS</span><span>55%</span></div>
+        <div class="bar"><span style="width:55%"></span></div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top"><span>Redação</span><span>80%</span></div>
+        <div class="bar"><span style="width:80%"></span></div>
+      </div>
+
+      <p class="signature" style="text-align:center;margin-top:30px">
+        Sempre aprendendo algo novo 🌷
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sonhos">
+  <div class="container sonhos-bg">
+
+    <div class="section-title reveal">
+      <span class="tag">Meu futuro é uma página em branco</span>
+      <h2>Sonhos para <em>florescer</em></h2>
+    </div>
+
+    <p class="sonhos-intro reveal">
+      Ainda não decidi exatamente o que quero ser,
+      mas existem caminhos que despertam minha curiosidade.
+    </p>
+
+    <div class="dream-grid">
+
+      <article class="dream-card reveal">
+        <span>🧪</span>
+        <h3>Farmácia</h3>
+        <p>Uma profissão que está entre minhas possibilidades para o futuro.</p>
+        <small>um sonho em construção ♡</small>
+      </article>
+
+      <article class="dream-card reveal">
+        <span>🩷</span>
+        <h3>Fisioterapia</h3>
+        <p>Outra área que tenho vontade de conhecer melhor.</p>
+        <small>um caminho para descobrir ♡</small>
+      </article>
+
+    </div>
+
+    <div class="quote reveal">
+      “Não preciso ter tudo decidido agora.
+      Estou apenas começando a escrever minha história.”
+    </div>
+
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="container reveal">
+
+    <span class="tag">Vamos nos conhecer?</span>
+
+    <h2>Um cantinho cheio de <em>carinho</em></h2>
+
+    <p>
+      Obrigada por conhecer um pouquinho do meu mundo.
+      Espero que tenha gostado! 💗
+    </p>
+
+    <a class="button primary"
+       href="https://www.instagram.com/tmrs_.oliveirasxz/"
+       target="_blank"
+       rel="noopener noreferrer">
+       ♡ Meu Instagram ↗
+    </a>
+
+    <div class="insta">@tmrs_.oliveirasxz</div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h3>Thami <span>♡</span> Tata</h3>
+  <p>Feito com carinho e um pouquinho de magia. 🎀</p>
+  <p>© <span id="ano"></span> Thami e Tata</p>
+</footer>
+
+<script>
+const menuButton = document.querySelector('.menu');
+const nav = document.querySelector('nav');
+
+menuButton.addEventListener('click', () => {
+  const aberto = nav.classList.toggle('open');
+
+  menuButton.textContent = aberto ? '✕' : '☰';
+  menuButton.setAttribute('aria-expanded', aberto);
+});
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuButton.textContent = '☰';
+    menuButton.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.getElementById('ano').textContent =
+  new Date().getFullYear();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(element => {
+  observer.observe(element);
+});
+</script>
+
+</body>
+</html>
+
+
+
